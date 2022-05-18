@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <link href="ourcss.css" rel="stylesheet">
+
+    <title>FYSO</title>
+  </head>
+  <body>
+    
+
+
+    <div class="video-container">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+           <source src="img/backgroundPose.MP4" type="video/mp4">
+        </video>
+            
+        <div class="container h-100"> 
+
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white"> 
+              <img src="img/logo-fyso-blanc-large.png" width=600px>
+              <p style="font-size: 30px;">Une promesse de <b style="font-size: 40px;">voyage</b>, un passeur de <b style="font-size: 40px;">souvenirs</b></p>
+              <p><button type="button" class="btn btn-primary video-btn" id="myBtn" style="font-size: 35px;">
+                Voir la vidéo
+              </button></p>                                  
+
+            </div> <!-- /.w-100 -->
+          </div> <!-- /.d-flex -->
+        </div> <!-- /.container -->
+     </div> <!-- /.video-container -->
+
+
+     <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+      <span class="close">&times;</span>
+      <video controls="controls" style ="margin-top: -50px;">
+        <source src="img/ide2022-jeu-hybride-Fyso.MP4" type="video/mp4" />
+        <source src="img/ide2022-jeu-hybride-Fyso.MP4" type="video/webm" />
+        <source src="img/ide2022-jeu-hybride-Fyso.MP4" type="video/ogg" />
+      </video>
+      </div>
+
+</div>
+
+
+  
+  <div style="margin-top: 100px;">
+  </div>
+     
+    <div class="container">
+        <div class="row featurette">
+          <div class="col-md-5 order-md-1">
+            <h2 class="featurette-heading">Votre voyage
+              <p style="font-size: 25px;"><span class="text-muted">Marchez sur les traces de vos prédécesseur-es</span></p></h2>
+            <p class="lead">FYSO permet à son ou sa premier-e utilisateur-ice de prendre une photo et de laisser une trace de son passage dans un endroit qui lui tient à coeur.<br/><br> L'appareil permet ensuite à n'importe qui (et même des décennies plus tard !) de retrouver l'endroit où la photo a été prise et de la comparer avec le paysage actuel.<br/><br/>Ni tout à fait appareil photo, ni tout à fait jumelles, FYSO est une véritable invitation au voyage et au souvenir.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+
+            <div id="comparison">
+              <figure>
+                <div id="divisor"></div>
+              </figure>
+              <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+            </div>
+    
+          </div>
+        </div>
+
+    </div>
+
+    <div style="margin-bottom: 100px;">
+    </div>
+
+    <div class="container">
+      <div class="row featurette">
+          
+        <div class="col-md-4 order-md-2">
+          
+            <h2 class="featurette-heading">Notre vision 
+            <p style="font-size: 25px;"><span class="text-muted"></span></p></h2>
+            <p class="lead">Notre équipe a imaginé et conçu <b>FYSO</b> pour être un objet durable et pratique à l'usage. <br><br> La partie supérieure permet de prendre une photo et d'en mémoriser les coordonées GPS. <br><br>La partie inférieure ne dévoile cette photo que lorsque l'appareil se retrouve à l'endroit exact où elle a été prise. Grâce à un système semi-réfléchissant, la photo se superpose au paysage actuel...</p>
+          </div>
+
+        <div class="col-md-6 order-md-1">
+          <img width="600" height="500" src="img/vision.jpg" role="img" aria-label="Plan principal">
+
+        </div>
+      
+      </div>
+    </div>
+
+    <div style="margin-bottom: 100px;">
+    </div>
+
+    <div class="container">
+      <div class="row featurette">
+        <div class="col-md-5 order-md-1">
+          <h2 class="featurette-heading">Un usage durable
+          <p style="font-size: 25px;"><span class="text-muted"></span></p></h2>
+            <!--<p style="font-size: 25px;"><span class="text-muted">Pour un usage durable</span></p></h2>-->
+          <p class="lead">Les matériaux choisis l'ont été pour leur durabilité dans le temps. 
+          Le boîtier est fait de bois recyclé et traité, et les instructions sont imprimées sur un simili papyrus, garantissant à quinconque retrouvant l'appareil que le mode d'emploi sera lisible.<br/><br/>
+          La technologie polaroïd est protégée par une boîte isotherme en acier galvanisé, dont l'intérieur a été matifié.
+          Les éléments chimiques pour le développement de la photo ne se conservent qu'un an, il est donc important de prendre la photo dans l'année suivant l'achat de FYSO.<br/><br/>
+          FYSO est parcimonieux en énergie, ce qui lui permet d'être entièrement alimenté par un système de dynamos manuelles.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+
+          <div class="col-md-6 order-md-1">
+          <img width="900" height="500" src="img/materiaux.JPG" role="img" aria-label="Plan principal">
+
+        </div>
+  
+        </div>
+      </div>
+
+  </div>
+
+  <div style="margin-top: 200px;">
+  </div>
+  
+  <hr class="featurette-divider">
+
+        <div style="margin-top: 100px;">
+        </div>
+  
+        <div style="text-align: center;">
+        <h1>Comment utiliser FYSO ?</h1>
+        </div> 
+
+        <div style="margin-top: 100px;">
+        </div>
+    
+<div class="container marketing">   
+    
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 13</div>
+    <img src="Storyboard/FYSO1.png" style="width:100%">
+    <div class="text">Lisez les instructions</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 13</div>
+    <img src="Storyboard/FYSO2.png" style="width:100%">
+    <div class="text">Rendez-vous à l'emplacement de votre choix</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 13</div>
+    <img src="Storyboard/FYSO3.png" style="width:100%">
+    <div class="text">Chargez l'appareil grâce aux dynamos jusqu'à ce que l'indicateur s'allume</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 13</div>
+    <img src="Storyboard/FYSO4.png" style="width:100%">
+    <div class="text">Prenez une photo. Son emplacement GPS est automatiquement enregistré</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 13</div>
+    <img src="Storyboard/FYSO5.png" style="width:100%">
+    <div class="text">L'appareil peut être laissé et retrouvé des années après...</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 13</div>
+    <img src="Storyboard/FYSO6.png" style="width:100%">
+    <div class="text">... ou vous pouvez l'offrir pour une utilisation future !</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 13</div>
+    <img src="Storyboard/FYSO7.png" style="width:100%">
+    <div class="text">La personne qui le retrouvera (ou se le verra offrir) devra le recharger grâce aux dynamos</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 13</div>
+    <img src="Storyboard/FYSO8.png" style="width:100%">
+    <div class="text">Sur le dessus de l'appareil, une lumière indique la direction dans laquelle se déplacer pour retrouver l'endroit</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">9 / 13</div>
+    <img src="Storyboard/FYSO9.png" style="width:100%">
+    <div class="text">Voyagez et retrouvez le lieu de la photo grâce à l'aide de FYSO </div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">10 / 13</div>
+    <img src="Storyboard/FYSO10.png" style="width:100%">
+    <div class="text">Si la lumière centrale s'allume, c'est que vous êtes au bon endroit</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">11 / 13</div>
+    <img src="Storyboard/FYSO11.png" style="width:100%">
+    <div class="text">Regardez à travers FYSO et utilisez la réglette mobile pour trouver l'orientation exacte de la photo</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">12 / 13</div>
+    <img src="Storyboard/FYSO12.png" style="width:100%">
+    <div class="text">Quand vous pointerez vers le bon endroit, l'emplacement de la photo s'ouvrira</div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">13 / 13</div>
+    <img src="Storyboard/FYSO13.png" style="width:100%">
+    <div class="text">Remettez la photo à l'intérieur et avant de regarder à travers FYSO : elle se superposera avec le paysage</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span>
+</div>
+
+</div>  
+
+
+<div style="margin-bottom: 200px;">
+</div>
+
+
+    <div class="container marketing">
+
+  
+  
+        <hr class="featurette-divider">
+
+        <div style="margin-top: 100px;">
+        </div>
+  
+        <div style="text-align: center;">
+        <h1>Leur histoire avec FYSO</h1>
+        </div> 
+        
+        <div style="margin-bottom:100px;">
+        </div>
+      <!-- feedback section-->
+
+      <div class="row">
+        <div class="col-md-6" style ="margin-left: 300px;">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Celle qui laisse sa marque</strong>
+              <h3 class="mb-0">Juliette Mortal</h3>
+              <div class="mb-1 text-muted">29 ans, Chercheuse en lettres classiques</div>
+              <p class="mb-auto">Juliette a acquis FYSO et sélectionné avec soin un endroit secret pour prendre sa photo. Elle cherche maintenant une personne qui sera digne d'en hériter :<br/>l'un-e de ses thésard-es, peut-être...</p>
+             
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src='img/persona1.JPG' width="250" height="270">
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Celui qui voyage</strong>
+              <h3 class="mb-0">Jérôme Philogène</h3>
+              <div class="mb-1 text-muted">31 years, Ingénieur en informatique</div>
+              <p class="card-text mb-auto">Jérôme est un amateur d'histoire mais surtout un grand sportif qui part en voyage dès que ses économies le lui permettent. Il a déniché un vieux FYSO dans une brocante, et projette de partir à l'aventure bientôt.
+              </p>
+              
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src='img/persona3.JPG' width="270" height="300">
+    
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Celui qui partage</strong>
+              <h3 class="mb-0">Leandro Mejliker</h3>
+              <div class="mb-1 text-muted">47 years, Traiteur</div>
+              <p class="card-text mb-auto">Leandro a hérité de FYSO par sa mère il y a 5 ans. Il prépare maintenant un voyage en famille pour retrouver l'endroit de la photo, et ne sait pas encore auquel de ses trois enfants il lèguera l'appareil.</p>
+             
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src='img/persona2.JPG' width="300" height="345">
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div style="margin-bottom: 200px;">
+      </div>
+      
+      
+          <div class="container marketing">
+      
+        
+        
+              <hr class="featurette-divider">
+      
+              <div style="margin-top: 100px;">
+              </div>
+        
+              <div style="text-align: center;">
+              <h1>Une durée de vie de 200 ans</h1>
+              </div> 
+              
+              <div style="margin-bottom:100px;">
+              </div>
+              <div style="text-align: center;">
+              <img src="Dessins techniques/Schema_interieur.png" width="300px">
+              <img src="Dessins techniques/Schema_exterieur.png" width="300px">
+              </div>
+            </br>
+            <div style="text-align: center;">
+              <img src="Dessins techniques/Schema_exterieur_annoteFR.png" width="800px" height="800px" style="margin-right: 100px;">
+              <img src="Dessins techniques/SchemaFYSO@2x.png" width="75%" style="margin-right: 300px;">
+            </div>
+
+          </div>
+
+
+
+
+
+      
+      
+      <div style="margin-bottom: 100px;">
+      </div>
+
+
+      <hr class="featurette-divider">
+
+      <div style="margin-bottom:100px;">
+      </div>
+
+      <div style="text-align: center;">
+      <h1>Une équipe de Fysolophes</h1>
+      </div> 
+      
+      <div style="margin-bottom:100px;">
+      </div>
+      
+      <!-- Three columns of text below the carousel -->
+      <div class="row featurette">
+        <div class="col-lg-6 ">
+          <div style="text-align: center;">
+            <img class="rounded-circle" src="img/oriane.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Oriane Revoyron</h2>
+            <p>Conception et réalisation de FYSO et de l'identité visuelle</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div style="text-align: center;">
+          <img class="rounded-circle" src="img/paloma.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Paloma Bry</h2>
+          <p>Conception et réalisation de FYSO, des personas et du storyboard</p>
+        </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 100px;">
+      </div>
+
+
+
+      <div class="row featurette">
+          <div class="col-lg-4">
+            <div style="text-align: center;">
+              <img class="rounded-circle" src="img/leo.jpg" alt="Generic placeholder image" width="140" height="140">
+              <h2>Léo Mirland</h2>
+              <p>Dessins techniques, conception de FYSO et réalisation de la vidéo de présentation</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div style="text-align: center;">
+              <img class="rounded-circle" src="img/sofiane.png" alt="Generic placeholder image" width="140" height="140">
+              <h2>Sofiane</h2>
+              <p>Conception et réalisation de FYSO et des personas</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div style="text-align: center;">
+              <img class="rounded-circle" src="img/max.jpg" alt="Generic placeholder image" width="140" height="140">
+              <h2>Maximilien Lajony</h2>
+              <p>Conception et réalisation de FYSO, du site internet et de la vidéo de présentation</p>
+            </div>
+          </div>
+
+      </div><!-- /.row -->
+    </div>
+
+    <div style="margin-bottom:100px;">
+    </div>
+   
+
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="ourjs.js"></script>
+    
+  </body>
+</html>
